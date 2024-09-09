@@ -1,9 +1,20 @@
 matplotlib-cpp
 ==============
 
-Welcome to matplotlib-cpp, possibly the simplest C++ plotting library.
-It is built to resemble the plotting API used by Matlab and matplotlib.
+CMakelists:
+```
+find_package(Python3 REQUIRED COMPONENTS
+        Interpreter
+        Development
+        NumPy
+)
 
+target_link_libraries(${PROJECT_NAME}
+        Python3::Python
+        Python3::Module
+        Python3::NumPy
+)
+```
 
 
 Usage
